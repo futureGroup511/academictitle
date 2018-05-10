@@ -1,0 +1,22 @@
+*{margin:0;padding: 0}
+table{
+    width: 60%;
+    margin:0 auto;
+    text-align: center;
+    margin-top: 5%
+}
+table th{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    height: 45px;
+    background-color: #eee;
+}
+table td{
+    height: 42px;
+}
+.page{margin: 9% 0 0 45%}
+.message{
+	margin-top:3%;
+	text-align: center;
+}

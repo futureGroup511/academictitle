@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.configuration.xml.reload" value="true" /><!-- 
+		设置成开发者模式 -->
+
+	<constant name="struts.i18n.encoding" value="utf8"></constant>
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 管理员，专家，参评人方面的xml -->
+	<package name="user" extends="struts-default,json-default" namespace="/user"  strict-method-invocation="false">
+		<action name="Manager_*" method="{1}" class="com.torrow.title.action.user.ManagerAction">
+			<result name="select">/WEB-INF/user/selectmanager.jsp</result>
+			<result name="add">/WEB-INF/user/addmanager.jsp</result>
+			<result name="update">/WEB-INF/user/updatemanager.jsp</result>
+			<result name="updatemyself">/WEB-INF/user/myself.jsp</result>
+			<result name="homepage">/WEB-INF/user/homepage.jsp</result>
+			<result name="logOff">/WEB-INF/user/logoff.jsp</result>
+			<result name="out">/index.jsp</result>
+		</action>
+		<action name="Expert_*" method="{1}" class="com.torrow.title.action.user.ExpertAction">
+			<result name="select">/WEB-INF/user/selectexpert.jsp</result>
+			<result name="add">/WEB-INF/user/addexpert.jsp</result>
+			<result name="update">/WEB-INF/user/updateexpert.jsp</result>
+		</action>
+		<action name="Participator_*" method="{1}" class="com.torrow.title.action.user.ParticipatorAction">
+			<result name="select">/WEB-INF/user/selectparticipator.jsp</result>
+			<result name="add">/WEB-INF/user/addparticipator.jsp</result>
+			<result name="update">/WEB-INF/user/updateparticipator.jsp</result>
+			<result name="newview">/WEB-INF/user/newview.jsp</result>
+		</action>
+		<action name="Discuss_*" method="{1}" class="com.torrow.title.action.user.DiscussAction">
+			<result name="select">/WEB-INF/user/selectdiscuss.jsp</result>
+			<result name="update">/WEB-INF/user/updatediscuss.jsp</result>
+		</action>
+	</package>
+</struts>

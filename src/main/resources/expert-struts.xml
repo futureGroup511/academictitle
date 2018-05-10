@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.configuration.xml.reload" value="true" /><!-- 设置成开发者模式 -->
+
+	<constant name="struts.i18n.encoding" value="utf8"></constant>
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 专家 -->
+	<package name="expert" extends="struts-default,json-default" namespace="/expert"  strict-method-invocation="false">
+		<action name="ExpertDiscussAction_*" method="{1}" class="com.torrow.title.action.expert.ExpertDiscussAction">
+			<result name="getAlreadyDiscuss">/WEB-INF/expert/alreadydiscuss.jsp</result>
+			<result name="getNoDiscuss">/WEB-INF/expert/nodiscuss.jsp</result>
+			<result name="toDiscuss">/WEB-INF/expert/discuss.jsp</result>
+			<result name="toUpdateRecord">/WEB-INF/expert/updatediscuss.jsp</result>
+		</action>
+		
+		<action name="ExpertNotice_*" method="{1}" class="com.torrow.title.action.expert.ExpertNoticeAction">
+			<result name="allNotice">/WEB-INF/expert/viewnotice.jsp</result>
+			<result name="noticeDetail">/WEB-INF/expert/noticedetail.jsp</result>
+		</action>
+
+		<action name="ExpertPersonal_*" method="{1}" class="com.torrow.title.action.expert.ExpertPersonalAction">
+			<result name="getMyself">/WEB-INF/expert/myself.jsp</result>
+			<result name="updateMyself">/WEB-INF/expert/myself.jsp</result>
+			<result name="back">/WEB-INF/expert/index.jsp</result>
+			<result name="logOff">/WEB-INF/expert/logoff.jsp</result>
+			<result name="out">/index.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>
