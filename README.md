@@ -14,6 +14,10 @@
 	开发工具：eclipse
 	操作系统：Windows，Linux（deepin）
 
+##开发人员
+
+​	张金高 马黎明 王青杰 汤艳杰 李会娟
+
 ##使用技术
 	Maven，SSH(Struts2，Spring，Hibernate)
 
